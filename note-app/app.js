@@ -4,7 +4,7 @@ const validator = require('validator')
 
 
 const result1 = validator.isEmail("vinod@gmail.com")
-const result2 = validator.isURL("https//abc.com")
+const result2 = validator.isURL("https://abc.com")
 console.log(result1)
 console.log(result2)
 
