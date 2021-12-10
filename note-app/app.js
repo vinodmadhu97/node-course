@@ -1,23 +1,16 @@
-const addNum = require('./utils.js')
-const notes = require("./notes.js")
-const validator = require('validator')
-const yargs = require('yargs')
-const { command, describe } = require('yargs')
+const book = {
+    'title': 'madolduwa',
+    'auther': 'martine wikramasinha'
+}
 
+//js object convert to the json its json formatted single string
+const bookJSON = JSON.stringify(book)
+console.log(bookJSON)
 
-const arg1 = process.argv
-const arg2 = yargs.argv
-console.log(arg1)
-console.log(arg2)
+//json parse to js object
+const jsObject = JSON.parse(bookJSON)
+console.log(jsObject.title)
 
-yargs.version("1.1.0")
-yargs.command({
-    command: "add",
-    describe : "adding new note",
-    handler : function(){
-        console.log("new file is added")
-    }
-})
 
 
 
